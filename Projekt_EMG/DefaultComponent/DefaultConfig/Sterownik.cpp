@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Sterownik
-//!	Generated Date	: Thu, 11, Jun 2026  
+//!	Generated Date	: Sun, 21, Jun 2026  
 	File Path	: DefaultComponent/DefaultConfig/Sterownik.cpp
 *********************************************************************/
 
@@ -85,6 +85,9 @@ void Sterownik::rootState_entDef() {
         NOTIFY_STATE_ENTERED("ROOT.Uspiony");
         rootState_subState = Uspiony;
         rootState_active = Uspiony;
+        //#[ state Uspiony.(Entry) 
+        std::cout << "Uspienie" << std::endl;
+        //#]
         NOTIFY_TRANSITION_TERMINATED("0");
     }
 }
@@ -98,10 +101,24 @@ IOxfReactive::TakeEventStatus Sterownik::rootState_processEvent() {
             if(IS_EVENT_TYPE_OF(evAktywuj_Default_id))
                 {
                     NOTIFY_TRANSITION_STARTED("1");
+                    //#[ state Uspiony.(Exit) 
+                    std::cout << "Wake up" << std::endl;
+                    //#]
                     NOTIFY_STATE_EXITED("ROOT.Uspiony");
                     NOTIFY_STATE_ENTERED("ROOT.Aktywny");
                     rootState_subState = Aktywny;
                     rootState_active = Aktywny;
+                    //#[ state Aktywny.(Entry) 
+                    std::cout << "\n=== [STEROWNIK sEMG] ===" << std::endl;
+                    std::cout << "[INIT] Przejœcie w tryb AKTYWNY." << std::endl;
+                    std::cout << "[HARDWARE] Konfiguracja przetwornika ADC na g³ównym interfejsie (RPi 5)..." << std::endl;
+                    std::cout << "[MEM] Alokacja buforów pamiêci dla okna czasowego sygna³u." << std::endl;
+                    
+                    // Resetowanie aktualnego gestu zabezpieczaj¹ce przed b³êdami pamiêci
+                    this->aktualnyGest = BRAK; 
+                    
+                    std::cout << "[SYS] Bufory wyczyszczone. Nas³uchiwanie na aktywnoœæ elektrod..." << std::endl;
+                    //#]
                     NOTIFY_TRANSITION_TERMINATED("1");
                     res = eventConsumed;
                 }
@@ -118,6 +135,9 @@ IOxfReactive::TakeEventStatus Sterownik::rootState_processEvent() {
                     NOTIFY_STATE_ENTERED("ROOT.Uspiony");
                     rootState_subState = Uspiony;
                     rootState_active = Uspiony;
+                    //#[ state Uspiony.(Entry) 
+                    std::cout << "Uspienie" << std::endl;
+                    //#]
                     NOTIFY_TRANSITION_TERMINATED("2");
                     res = eventConsumed;
                 }
@@ -131,6 +151,17 @@ IOxfReactive::TakeEventStatus Sterownik::rootState_processEvent() {
                     NOTIFY_STATE_ENTERED("ROOT.Aktywny");
                     rootState_subState = Aktywny;
                     rootState_active = Aktywny;
+                    //#[ state Aktywny.(Entry) 
+                    std::cout << "\n=== [STEROWNIK sEMG] ===" << std::endl;
+                    std::cout << "[INIT] Przejœcie w tryb AKTYWNY." << std::endl;
+                    std::cout << "[HARDWARE] Konfiguracja przetwornika ADC na g³ównym interfejsie (RPi 5)..." << std::endl;
+                    std::cout << "[MEM] Alokacja buforów pamiêci dla okna czasowego sygna³u." << std::endl;
+                    
+                    // Resetowanie aktualnego gestu zabezpieczaj¹ce przed b³êdami pamiêci
+                    this->aktualnyGest = BRAK; 
+                    
+                    std::cout << "[SYS] Bufory wyczyszczone. Nas³uchiwanie na aktywnoœæ elektrod..." << std::endl;
+                    //#]
                     NOTIFY_TRANSITION_TERMINATED("5");
                     res = eventConsumed;
                 }
@@ -142,6 +173,23 @@ IOxfReactive::TakeEventStatus Sterownik::rootState_processEvent() {
                     pushNullTransition();
                     rootState_subState = Kalibracja;
                     rootState_active = Kalibracja;
+                    //#[ state Kalibracja.(Entry) 
+                    std::cout << "\n=== [MODUL KALIBRACJI sEMG] ===" << std::endl;
+                    std::cout << "[CALIB] Rozpoczecie procedury profilowania elektrod." << std::endl;
+                    
+                    // Symulacja pomiaru szumu bazowego (spoczynkowego)
+                    std::cout << "[CALIB] Faza 1: Akwizycja szumu spoczynkowego (Relaxation Phase)..." << std::endl;
+                    int baselineNoise = (rand() % 40) + 15;
+                    std::cout << "[CALIB] Wyznaczony poziom szumu: " << baselineNoise << " uV." << std::endl;
+                    
+                    // Symulacja pomiaru maksymalnego skurczu (MVC)
+                    std::cout << "[CALIB] Faza 2: Akwizycja maksymalnego skurczu (MVC Phase)..." << std::endl;
+                    int maxContraction = (rand() % 400) + 600;
+                    std::cout << "[CALIB] Wyznaczone MVC: " << maxContraction << " uV." << std::endl;
+                    
+                    std::cout << "[CALIB] Adaptacja wag i progow decyzyjnych algorytmu na podstawie MVC." << std::endl;
+                    std::cout << "[CALIB] Kalibracja zakonczona. Wyzwalanie powrotu do trybu sterowania." << std::endl;
+                    //#]
                     NOTIFY_TRANSITION_TERMINATED("3");
                     res = eventConsumed;
                 }
@@ -155,6 +203,9 @@ IOxfReactive::TakeEventStatus Sterownik::rootState_processEvent() {
                 {
                     NOTIFY_TRANSITION_STARTED("4");
                     popNullTransition();
+                    //#[ state Kalibracja.(Exit) 
+                    std::cout << "[CALIB] Kalibracja zakonczona. Wyzwalanie powrotu do trybu sterowania." << std::endl;
+                    //#]
                     NOTIFY_STATE_EXITED("ROOT.Kalibracja");
                     //#[ transition 4 
                     this->aktualnyGest = BRAK;
@@ -162,6 +213,17 @@ IOxfReactive::TakeEventStatus Sterownik::rootState_processEvent() {
                     NOTIFY_STATE_ENTERED("ROOT.Aktywny");
                     rootState_subState = Aktywny;
                     rootState_active = Aktywny;
+                    //#[ state Aktywny.(Entry) 
+                    std::cout << "\n=== [STEROWNIK sEMG] ===" << std::endl;
+                    std::cout << "[INIT] Przejœcie w tryb AKTYWNY." << std::endl;
+                    std::cout << "[HARDWARE] Konfiguracja przetwornika ADC na g³ównym interfejsie (RPi 5)..." << std::endl;
+                    std::cout << "[MEM] Alokacja buforów pamiêci dla okna czasowego sygna³u." << std::endl;
+                    
+                    // Resetowanie aktualnego gestu zabezpieczaj¹ce przed b³êdami pamiêci
+                    this->aktualnyGest = BRAK; 
+                    
+                    std::cout << "[SYS] Bufory wyczyszczone. Nas³uchiwanie na aktywnoœæ elektrod..." << std::endl;
+                    //#]
                     NOTIFY_TRANSITION_TERMINATED("4");
                     res = eventConsumed;
                 }

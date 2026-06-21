@@ -2,22 +2,22 @@ I-Logix-RPY-Archive version 8.15.0 * 202411191641
 
 - m_fileModifyTime = { IRPYRawContainer 
 	- size = 16;
-	- value = "DefaultComponent/DefaultConfig/Default.cpp" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Default.h" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/KlasyfikatorML.cpp" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/KlasyfikatorML.h" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Odbiornik.cpp" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Odbiornik.h" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Operator.cpp" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Operator.h" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Sterownik.cpp" 6.11.2026::7:11:12
-	"DefaultComponent/DefaultConfig/Sterownik.h" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Technik.cpp" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Technik.h" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/UrzadzenieBioniczne.cpp" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/UrzadzenieBioniczne.h" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Uzytkownik.cpp" 6.11.2026::7:7:10
-	"DefaultComponent/DefaultConfig/Uzytkownik.h" 6.11.2026::7:7:10
+	- value = "DefaultComponent/DefaultConfig/Default.cpp" 6.21.2026::14:52:47
+	"DefaultComponent/DefaultConfig/Default.h" 6.21.2026::14:52:47
+	"DefaultComponent/DefaultConfig/KlasyfikatorML.cpp" 6.21.2026::15:10:42
+	"DefaultComponent/DefaultConfig/KlasyfikatorML.h" 6.21.2026::15:10:42
+	"DefaultComponent/DefaultConfig/Odbiornik.cpp" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/Odbiornik.h" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/Operator.cpp" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/Operator.h" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/Sterownik.cpp" 6.21.2026::15:12:33
+	"DefaultComponent/DefaultConfig/Sterownik.h" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/Technik.cpp" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/Technik.h" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/UrzadzenieBioniczne.cpp" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/UrzadzenieBioniczne.h" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/Uzytkownik.cpp" 6.21.2026::14:52:48
+	"DefaultComponent/DefaultConfig/Uzytkownik.h" 6.21.2026::14:52:48
 	
 }
 - m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
@@ -34,7 +34,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202411191641
 	- _name = "UrzadzenieBioniczne";
 	- _id = GUID 7443242c-3c59-4838-bc1d-c57e28172060;
 }
-- genTime = 6.11.2026::7:7:10;
+- genTime = 6.21.2026::15:11:53;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\Projekt_EMG_rpy\\Default.sbsx";
@@ -42,7 +42,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202411191641
 	- _name = "Sterownik";
 	- _id = GUID 6e15aba9-d5fc-4aa7-b3eb-733ef33993c6;
 }
-- genTime = 6.11.2026::7:11:12;
+- genTime = 6.21.2026::15:12:33;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\Projekt_EMG_rpy\\Default.sbsx";
@@ -50,21 +50,21 @@ I-Logix-RPY-Archive version 8.15.0 * 202411191641
 	- _name = "Odbiornik";
 	- _id = GUID 584e175a-3178-4fc1-92b5-ec836058e050;
 }
-- genTime = 6.11.2026::7:7:10;
+- genTime = 6.21.2026::15:11:53;
 - hElement = { IHandle 
 	- _m2Class = "ISubsystem";
 	- _filename = ".\\..\\..\\Projekt_EMG_rpy\\Default.sbsx";
 	- _name = "Default";
 	- _id = GUID c697ddda-c897-4a88-b00a-239c519c07d7;
 }
-- genTime = 6.11.2026::7:11:12;
+- genTime = 6.21.2026::15:11:53;
 - hElement = { IHandle 
 	- _m2Class = "ICodeGenConfigInfo";
 	- _filename = ".\\..\\..\\Projekt_EMG_rpy\\DefaultComponent.cmpx";
 	- _name = "DefaultComponent\\DefaultConfig";
 	- _id = GUID 460a07bc-8ebf-4473-84cd-266b05c284d9;
 }
-- genTime = 6.11.2026::7:11:12;
+- genTime = 6.21.2026::15:12:33;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\Projekt_EMG_rpy\\Default.sbsx";
@@ -72,7 +72,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202411191641
 	- _name = "KlasyfikatorML";
 	- _id = GUID d04fac1f-6e17-4a08-994d-038a3140cb45;
 }
-- genTime = 6.11.2026::7:7:10;
+- genTime = 6.21.2026::15:11:53;
 - hElement = { IHandle 
 	- _m2Class = "IActor";
 	- _filename = ".\\..\\..\\Projekt_EMG_rpy\\Default.sbsx";
@@ -80,7 +80,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202411191641
 	- _name = "Operator";
 	- _id = GUID 1e877118-57a3-407a-bbf1-2a67cae0307a;
 }
-- genTime = 6.11.2026::7:7:10;
+- genTime = 6.21.2026::15:11:53;
 - hElement = { IHandle 
 	- _m2Class = "IActor";
 	- _filename = ".\\..\\..\\Projekt_EMG_rpy\\Default.sbsx";
@@ -88,7 +88,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202411191641
 	- _name = "Technik";
 	- _id = GUID 64059c3d-d93d-4dfd-ac57-6431aecc6f08;
 }
-- genTime = 6.11.2026::7:7:10;
+- genTime = 6.21.2026::15:11:53;
 - hElement = { IHandle 
 	- _m2Class = "IActor";
 	- _filename = ".\\..\\..\\Projekt_EMG_rpy\\Default.sbsx";
@@ -96,5 +96,5 @@ I-Logix-RPY-Archive version 8.15.0 * 202411191641
 	- _name = "Uzytkownik";
 	- _id = GUID 991ea98f-65c0-420d-bb5e-4c5c1a62b3c5;
 }
-- genTime = 6.11.2026::7:7:10;
+- genTime = 6.21.2026::15:11:53;
 

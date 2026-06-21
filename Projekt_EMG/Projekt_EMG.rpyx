@@ -12,8 +12,8 @@
 			<_id type="a">GUID 652e5a6d-3745-430d-abc0-46ddc67ecade</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Projekt_EMG</_name>
-			<_modifiedTimeWeak type="a">6.11.2026::7:16:19</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.11.2026::7:16:19</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.21.2026::15:3:55</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.21.2026::15:3:55</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
@@ -74,10 +74,6 @@
 				</IRPYRawContainer>
 			</Multiplicities>
 			<_isImportedFromDM type="a">0</_isImportedFromDM>
-			<MSCS type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</MSCS>
 			<mapOslcAddedCollections type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
@@ -362,8 +358,8 @@
 			</_properties>
 			<_name type="a">Architektura_Systemu</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.11.2026::6:50:35</_modifiedTime>
-			<_lastModifiedTime type="a">6.11.2026::6:50:35</_lastModifiedTime>
+			<_modifiedTime type="a">6.21.2026::15:3:55</_modifiedTime>
+			<_lastModifiedTime type="a">6.21.2026::15:3:55</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -987,6 +983,9 @@
 			<m_displayOption type="a">Public</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
+			<_itemValueOfFontPropertiesMapCount type="a">2</_itemValueOfFontPropertiesMapCount>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
 		</CGICompartment>
 		<IComponent type="e">
 			<fileName type="a">DefaultComponent</fileName>
